@@ -150,7 +150,13 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Example)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     _this.onClickButton = function () {
-      console.log(Math.random());
+      console.log(_this.props);
+
+      _this.props.store.updateName();
+    };
+
+    _this.onClickResetButton = function () {
+      _this.props.store.clearName();
     };
 
     return _this;
@@ -161,11 +167,15 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.store.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: function onClick() {
           return _this2.onClickButton();
         }
-      }, "Let's Try"));
+      }, "Let's Try"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: function onClick() {
+          return _this2.onClickResetButton();
+        }
+      }, "Reset"));
     }
   }]);
 

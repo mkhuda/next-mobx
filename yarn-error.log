@@ -1,0 +1,52 @@
+Arguments: 
+  /home/mkh/.nvm/versions/node/v8.11.3/bin/node /usr/share/yarn/bin/yarn.js install
+
+PATH: 
+  /home/mkh/.nvm/versions/node/v8.11.3/bin:/home/mkh/.rbenv/shims:/home/mkh/.rbenv/bin:/home/mkh/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/mkh/.composer/vendor/bin:/home/mkh/Android/Sdk/tools:/home/mkh/Android/Sdk/platform-tools:/home/mkh/Android/Sdk/tools/bin:/usr/lib/go-1.10/bin
+
+Yarn version: 
+  1.9.2
+
+Node version: 
+  8.11.3
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/mkh/Public/V2/with-mobx/package.json: Unexpected token } in JSON at position 474
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:1130:59
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:92:30)
+      at /usr/share/yarn/lib/cli.js:103:13
+      at <anonymous>
+
+npm manifest: 
+  {
+    "name": "with-mobx",
+    "version": "1.0.0",
+    "scripts": {
+      "dev": "node server.js",
+      "build": "next build",
+      "start": "NODE_ENV=production node server.js"
+    },
+    "dependencies": {
+      "mobx": "^2.7.0",
+      "mobx-react": "^4.0.4",
+      "next": "latest",
+      "react": "^16.0.0",
+      "react-dom": "^16.0.0"
+    },
+    "license": "ISC",
+    "devDependencies": {
+      "@babel/plugin-proposal-class-properties": "^7.1.0",
+      "@babel/plugin-proposal-decorators": "^7.1.0",
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

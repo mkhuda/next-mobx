@@ -5,6 +5,11 @@ node_modules/
 docker.env
 .DS_Store
 /.env.production
+/.idea
+/.vagrant
+*.iml
+*.xml
+
 
 # Logs
 logs

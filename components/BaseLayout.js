@@ -1,7 +1,7 @@
 import React from "react"
 
 class BaseLayout extends React.Component {
-  render {
+  render() {
     return(
       <div>
         <h1>Layout</h1>
@@ -10,3 +10,5 @@ class BaseLayout extends React.Component {
     )
   }
 }
+
+export default BaseLayout

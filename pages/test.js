@@ -1,11 +1,26 @@
 import React from "react";
+import BaseLayout from "../components/BaseLayout";
+import HeadComponent from "../components/HeadComponent";
 import Example from "../components/Example";
+import axios from "axios";
 
 export default class Test extends React.Component {
   static async getInitialProps({ query }) {
-    return { slug: query.slug };
+    const todos = await axios.get(
+      "https://jsonplaceholder.typicode.com/todos/2",
+    );
+    return {
+      slug: query.slug,
+      data: todos.data
+    };
   }
   render() {
-    return <h1>This is test page {this.props.slug}</h1>;
+    return (
+      <BaseLayout>
+        <HeadComponent title={this.props.data.title} description="test description" />
+        <h1>{this.props.data.title}</h1>
+        <h1>This is test page {this.props.slug}</h1>
+      </BaseLayout>
+    );
   }
 }

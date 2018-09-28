@@ -4,9 +4,11 @@ const dev = process.env.NODE_ENV !== 'production'
 const { createServer } = require('http')
 const { parse } = require('url')
 const next = require('next')
+const routes = require('./routes')
+
 const mobxReact = require('mobx-react')
 const app = next({ dev })
-const handle = app.getRequestHandler()
+const handle = routes.getRequestHandler(app)
 
 mobxReact.useStaticRendering(true)
 

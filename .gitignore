@@ -69,7 +69,6 @@ typings/
 .cache
 
 # next.js build output
-.next
 
 # Serverless directories
 .serverless

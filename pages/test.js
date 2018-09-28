@@ -11,7 +11,8 @@ export default class Test extends React.Component {
     );
     return {
       slug: query.slug,
-      data: todos.data
+      maybe: query.maybe,
+      data: todos.data,
     };
   }
   render() {
@@ -19,7 +20,7 @@ export default class Test extends React.Component {
       <BaseLayout>
         <HeadComponent title={this.props.data.title} description="test description" />
         <h1>{this.props.data.title}</h1>
-        <h1>This is test page {this.props.slug}</h1>
+        <h1>This is test page {this.props.slug} & {this.props.maybe}</h1>
       </BaseLayout>
     );
   }

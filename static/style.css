@@ -1,0 +1,8 @@
+@font-face {
+    font-family: metropolis;
+    src: url("/static/fonts/metropolisBold.woff");
+}
+html {
+  font-family: "metropolis";
+  background: #f2f2f2;
+}

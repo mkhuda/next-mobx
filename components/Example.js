@@ -1,6 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
 import { inject, observer } from 'mobx-react'
+import styled from 'styled-components'
+
+const Wrapper = styled.div`
+  background: grey;
+  padding: 10px;
+`
 
 @inject('store') @observer
 class Example extends React.Component {
@@ -13,11 +19,11 @@ class Example extends React.Component {
   }
   render () {
     return (
-      <div>
+      <Wrapper>
         <h1>{this.props.store.name}</h1>
         <button onClick={() => this.onClickButton()}>Let's Try</button>
         <button onClick={() => this.onClickResetButton()}>Reset</button>
-      </div>
+      </Wrapper>
     )
   }
 }

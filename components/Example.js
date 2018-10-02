@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { inject, observer } from 'mobx-react'
 import styled from 'styled-components'
 
+import * as gtag from '../lib/gtag'
+
 const Wrapper = styled.div`
   background: grey;
   padding: 10px;
@@ -16,11 +18,19 @@ class Example extends React.Component {
   }
   onClickResetButton = () => {
     this.props.store.clearName();
+
+    /*gtag.event({
+      action: 'clear name',
+      category: 'test',
+      label: 'test'
+    });*/
+
   }
   render () {
     return (
       <Wrapper>
-        <h1>{this.props.store.name}</h1>
+          <Link href="/test"><a>Test</a></Link>
+        <h1 className='example'>{this.props.store.name}</h1>
         <button onClick={() => this.onClickButton()}>Let's Try</button>
         <button onClick={() => this.onClickResetButton()}>Reset</button>
       </Wrapper>

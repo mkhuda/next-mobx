@@ -4,25 +4,14 @@ let store = null
 
 class Store {
   @observable lastUpdate = 0
-  @observable light = false
-  @observable name = ""
 
   constructor (isServer, lastUpdate) {
     this.lastUpdate = lastUpdate
   }
 
-  @action updateName = () => {
-    this.name = "Hello Bro"
-  }
-
-  @action clearName = () => {
-    this.name = ""
-  }
-
   @action start = () => {
     this.timer = setInterval(() => {
       this.lastUpdate = Date.now()
-      this.light = true
     }, 1000)
   }
 

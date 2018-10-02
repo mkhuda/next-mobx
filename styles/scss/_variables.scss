@@ -1,0 +1,200 @@
+// Options
+$enable-rounded: true;
+$enable-shadows: false;
+$enable-gradients: false;
+$enable-transitions: true;
+$enable-hover-media-query: false;
+$enable-grid-classes: true;
+$enable-print-styles: true;
+
+// Typography
+$font-family-sans-serif: "Source Sans Pro", sans-serif;
+$font-size-base: 1rem; // Assumes the browser default, typically `14px 0.875`
+$font-size-lg: ($font-size-base * 1.25) !default;
+$font-size-sm: ($font-size-base * .875) !default;
+
+// Colors
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #868e96;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+$white:   #ffffff;
+$black:   #000000;
+$azure:   #45aaf2;
+$lime:    #7bd235;
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$primary:       #efae46 !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $azure !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+// Body
+$body-bg: #ffffff;
+$body-color: $gray-700 !default;
+$sidebar-width: 240px;
+$navbar-height: 70px;
+$fa-font-path : '~@fortawesome/fontawesome-free/webfonts';
+
+// Grid
+$grid-columns:        12 !default;
+$grid-gutter-width:   2rem !default;
+
+// Yiq
+$yiq-contrasted-threshold: 190;
+$yiq-text-dark: $body-color;
+$yiq-text-light: $white;
+
+// Buttons
+$input-btn-focus-width: 2px;
+$input-disabled-bg: $gray-100;
+
+// Border Color , Radius , Active
+$border-width: 1px;
+$border-color: rgba(0, 40, 100, .12);
+$border-color-dark: rgba(0, 40, 100, .24);
+
+$line-height-lg:              1.5 !default;
+$line-height-sm:              1.5 !default;
+
+$border-radius:               .2rem !default; //.25
+$border-radius-lg:            .2rem !default; //.3
+$border-radius-sm:            .2rem !default; //.2
+
+$component-active-color:      $white !default;
+$component-active-bg:         $primary !default;
+
+//Text
+$text-muted:                  $gray-500 !default;
+$text-muted-dark: $gray-600;
+
+//Link
+$link-color: $primary !default;
+
+
+// Forms
+$input-border-width: 1px;
+$input-bg: #fff;
+$input-color:                           $body-color !default;
+$input-border-color:                    $border-color !default;
+$input-box-shadow:                      inset 0 1px 1px rgba($black, .075) !default;
+$input-placeholder-color:               $gray-500 !default;
+$input-group-addon-border-color: $input-border-color;
+$input-group-addon-bg: $gray-100;
+
+
+// Dropdowns
+$dropdown-border-color: $border-color;
+$dropdown-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$dropdown-min-width:                12rem !default;
+$dropdown-link-color:               $text-muted !default;
+$dropdown-link-hover-color:         $body-color !default;
+$dropdown-link-hover-bg:            $gray-100 !default;
+$dropdown-divider-bg:               $border-color !default;
+$dropdown-link-disabled-color:      $gray-100 !default;
+$dropdown-item-padding-y:           .25rem !default;
+$dropdown-item-padding-x:           1rem !default;
+
+// Cards
+$card-border-color: $border-color;
+$card-spacer-y: 1rem;
+$card-spacer-x: 1.5rem;
+
+// Navbar
+$navbar-nav-link-padding-x:         0.65rem !default;
+
+//Nav Toggle
+$navbar-toggler-padding-y:          .5625rem !default;
+$navbar-toggler-padding-x:          .625rem !default;
+$navbar-toggler-font-size:          $font-size-base !default;
+
+//Nav Theme
+$navbar-light-color:                $body-color !default;
+$navbar-light-hover-color:          $primary !default;
+$navbar-light-active-color:         $primary !default;
+$navbar-light-disabled-color:       rgba($body-color, .3) !default;
+$navbar-light-toggler-border-color: $border-color !default;
+
+
+//Spacing
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge((
+        0: 0,
+        1: ($spacer * .25),
+        2: ($spacer * .5),
+        3: ($spacer * .75),
+        4: $spacer,
+        5: ($spacer * 1.25),
+        6: ($spacer * 1.5),
+        7: ($spacer * 1.75),
+        8: ($spacer * 2),
+        9: ($spacer * 2.25),
+        10: ($spacer * 2.5),
+        11: ($spacer * 2.75),
+        12: ($spacer * 3),
+        13: ($spacer * 3.25),
+        14: ($spacer * 3.5),
+        15: ($spacer * 3.75),
+        16: ($spacer * 4),
+        17: ($spacer * 4.25),
+        18: ($spacer * 4.5),
+        19: ($spacer * 4.75),
+        20: ($spacer * 5),
+        21: ($spacer * 5.25),
+        22: ($spacer * 5.5),
+        23: ($spacer * 5.75),
+        24: ($spacer * 6),
+        25: ($spacer * 6.25),
+        26: ($spacer * 6.5),
+        27: ($spacer * 6.75),
+        28: ($spacer * 7),
+        29: ($spacer * 7.25),
+        30: ($spacer * 7.5),
+
+), $spacers);
+
+
+// Tables
+$table-accent-bg: rgba(0, 0, 0, .02);
+$table-hover-bg: rgba(0, 0, 0, .04);
+
+//$custom-select-padding-y: .5rem;
+//$custom-select-padding-x: .75rem;
+
+$custom-select-indicator-color: #999;
+$custom-select-indicator: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M0 0L10 0L5 5L0 0'/%3E%3C/svg%3E");
+
+// List group
+$list-group-border-color: $border-color;
+$list-group-active-color: $primary;
+$list-group-active-bg: mix($primary, #fff, 4%);
+$list-group-active-border-color: $list-group-border-color;
+
+// Popovers
+$popover-body-padding-y: .75rem;
+$popover-body-padding-x: 1rem;
+$popover-border-color: #dee3eb;
+$popover-body-color: $text-muted-dark;
+$popover-arrow-width: .5rem;
+$popover-arrow-height: .5rem;
+

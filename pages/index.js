@@ -1,17 +1,18 @@
-import React from "react";
-import Example from "../components/Example";
-import HeadComponent from "../components/HeadComponent";
+import React from 'react'
+import Router from 'next/router'
 
 export default class Index extends React.Component {
-  render() {
-    return (
-      <div>
-        <HeadComponent
-          title="bla bla test"
-          description="bla bla description test"
-        />
-        <Example title="Example Page" />
-      </div>
-    );
-  }
+
+    static async getInitialProps({ res }) {
+        if (res) {
+            res.writeHead(302, {
+                Location: '/home'
+            })
+            res.end()
+        } else {
+            Router.push('/home')
+        }
+        return {}
+    }
+
 }

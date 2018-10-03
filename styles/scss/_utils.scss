@@ -1,32 +1,9 @@
-//text align
-@include media-breakpoint-up(xs) {
-  .text-center-xs{text-align: center;}
-  .text-left-xs{text-align: left;}
-  .text-right-xs{text-align: right;}
-}
-@include media-breakpoint-up(sm) {
-  .text-center-sm{text-align: center;}
-  .text-left-sm{text-align: left;}
-  .text-right-sm{text-align: right;}
-}
-@include media-breakpoint-up(md) {
-  .text-center-md{text-align: center;}
-  .text-left-md{text-align: left;}
-  .text-right-md{text-align: right;}
-}
-@include media-breakpoint-up(lg) {
-  .text-center-lg{text-align: center;}
-  .text-left-lg{text-align: left;}
-  .text-right-lg{text-align: right;}
-}
-
 //common
 .pointer{cursor:pointer}
 .line-height-1{line-height: 1;}
 .line-height-1-1{line-height: 1.1;}
 .line-height-1-2{line-height: 1.2;}
 .line-height-1-3{line-height: 1.3;}
-
 
 //opacity
 .opacity-1{opacity: .1}

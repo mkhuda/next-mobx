@@ -29,8 +29,8 @@ class Footer extends React.Component {
                             &nbsp;
                             <div className="d-none d-lg-block d-md-block"></div>
 
-                            | &nbsp;<Link href="#"><a className="text-muted">Terms & Condition</a></Link>&nbsp;
-                            | &nbsp;<Link href="#"><a className="text-muted">Privacy & Policy</a></Link>&nbsp;
+                            | &nbsp;<Link href="/"><a className="text-muted">Terms & Condition</a></Link>&nbsp;
+                            | &nbsp;<Link href="/"><a className="text-muted">Privacy & Policy</a></Link>&nbsp;
                             | &nbsp;SSM (1036935K)</small>
                     </Col>
                     <Col lg={{order: 2}} md={{order: 2}} className="col-md-auto text-right-md">

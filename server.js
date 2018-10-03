@@ -1,7 +1,6 @@
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
 
-const { createServer } = require('http')
 const { parse } = require('url')
 const next = require('next')
 const routes = require('./routes')
@@ -9,6 +8,7 @@ const routes = require('./routes')
 const mobxReact = require('mobx-react')
 const app = next({ dev })
 const handle = routes.getRequestHandler(app)
+const { createServer } = require('http')
 
 mobxReact.useStaticRendering(true)
 
@@ -21,3 +21,4 @@ app.prepare().then(() => {
     console.log(`> Ready on http://localhost:${port}`)
   })
 })
+

@@ -13,17 +13,28 @@ import {
 
 const NavbarBackground = styled.div`
     position:absolute;
+    width:100%;
+    height:100%;
+    background:#ffffff;
+    left: 0;
+    z-index: -1;
+    border-bottom:1px solid #dddddd;
+`
+
+const NavbarBackgroundHalf = styled.div`
+    position:absolute;
     width:50%;
     height:100%;
     background:#ffffff;
     left: 0;
     z-index: -1;
-    
     @media (max-width: 991px) {
-    width:100%;
+    width: 100%;
+    border-bottom:1px solid #dddddd;
     }
     
 `
+
 class Header extends React.Component {
 
     constructor(props) {
@@ -45,11 +56,10 @@ class Header extends React.Component {
             <div className="position-relative">
 
 
-
-
                 <Navbar light expand="md"  fixed="top" className="py-4">
 
-                    <NavbarBackground></NavbarBackground>
+                    {(this.props.half) ? <NavbarBackgroundHalf></NavbarBackgroundHalf> :<NavbarBackground></NavbarBackground> }
+
 
                     <Container>
 
@@ -59,17 +69,26 @@ class Header extends React.Component {
                             </a>
                         </Link>
 
-                        <NavbarToggler onClick={this.toggle} />
-                        <Collapse isOpen={this.state.isOpen} navbar>
-                            <Nav className="ml-auto" navbar>
+                        {this.props.half}
+
+
+                        <Nav className="ml-auto" navbar>
+                        <NavItem className="ml-2">
+                        <Button color="primary">Hiring Now!</Button>
+                        </NavItem>
+                        </Nav>
+
+                        {/*<NavbarToggler onClick={this.toggle} />*/}
+                        {/*<Collapse isOpen={this.state.isOpen} navbar>*/}
+                            {/*<Nav className="ml-auto" navbar>*/}
                                 {/*<NavItem>*/}
                                     {/*<Link href="/"><a className="text-body nav-link">Components</a></Link>*/}
                                 {/*</NavItem>*/}
-                                <NavItem className="ml-2">
-                                    <Button color="primary">Hiring Now!</Button>
-                                </NavItem>
-                            </Nav>
-                        </Collapse>
+                                {/*<NavItem className="ml-2">*/}
+                                    {/*<Button color="primary">Hiring Now!</Button>*/}
+                                {/*</NavItem>*/}
+                            {/*</Nav>*/}
+                        {/*</Collapse>*/}
                     </Container>
                 </Navbar>
             </div>

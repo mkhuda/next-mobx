@@ -55,6 +55,7 @@ $sidebar-width: 240px;
 $navbar-height: 70px;
 $fa-font-path : '~@fortawesome/fontawesome-free/webfonts';
 
+
 // Grid
 $grid-columns:        12 !default;
 $grid-gutter-width:   2rem !default;
@@ -170,6 +171,16 @@ $spacers: map-merge((
         28: ($spacer * 7),
         29: ($spacer * 7.25),
         30: ($spacer * 7.5),
+        31: ($spacer * 7.75),
+        32: ($spacer * 8),
+        33: ($spacer * 8.25),
+        34: ($spacer * 8.5),
+        35: ($spacer * 8.75),
+        36: ($spacer * 9),
+        37: ($spacer * 9.25),
+        38: ($spacer * 9.5),
+        39: ($spacer * 9.75),
+        40: ($spacer * 10),
 
 ), $spacers);
 

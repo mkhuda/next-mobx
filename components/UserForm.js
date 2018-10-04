@@ -41,10 +41,6 @@ const lookup = (callback) => {
 };
 
 
-
-
-
-
 @inject('store') @observer
 class UserForm extends React.Component {
 
